@@ -67,20 +67,20 @@ function WeatherResults({ data, unit, onToggleFavorite, favoriteCities }) {
           </span>
         </div>
 
-        <div className="col-4 current-location-details">
-          <div className="col-12">
+        <div className="col-sm-6 current-location-details">
+          <div className="col-sm-12">
             Description:{" "}
             <span className="description" id="description">
               {current.weather[0].description}
             </span>
           </div>
-          <div className="col-12">
+          <div className="col-sm-12">
             Humidity: <span className="humidity">{current.main.humidity}%</span>
           </div>
-          <div className="col-12">
+          <div className="col-sm-12">
             Cloudiness: <span className="cloudiness">{current.clouds.all}%</span>
           </div>
-          <div className="col-12">
+          <div className="col-sm-12">
             Wind: <span className="wind-speed">{current.wind.speed} m/sec</span>
           </div>
         </div>
@@ -100,7 +100,7 @@ function WeatherResults({ data, unit, onToggleFavorite, favoriteCities }) {
           {forecast.map((day, index) => (
             <div key={index} className="col">
               <div className="row">
-                <div className="col-12">
+                <div className="col-sm-12">
                   {new Date(day.dt_txt).toLocaleDateString()}
                 </div>
                 <div className="col-12 weather-icon">
@@ -110,7 +110,7 @@ function WeatherResults({ data, unit, onToggleFavorite, favoriteCities }) {
                     width="50px"
                   />
                 </div>
-                <div className="col-12">
+                <div className="col-sm-12">
                   <span className="max-temp">
                     {forecastTemps[index].max.toFixed(1)}
                     {currentUnit === "F" ? <span> °F </span> : <span> °C </span>}
