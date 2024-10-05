@@ -3,6 +3,7 @@ import WeatherInput from "./assets/components/WeatherInput";
 import WeatherResults from "./assets/components/WeatherResults";
 import Spinner from "./assets/components/Spinner";
 import { fetchWeatherData } from './assets/services/weatherService';
+import ProjectSummary from "./assets/components/ProjectSummary";
 import "./App.css";
 
 function App() {
@@ -48,12 +49,14 @@ function App() {
   }, [favoriteCities, weatherData, unit]); // Add unit to dependencies
 
   return (
+    <>
     <div className="app-container">
       <div className="title">
         <span>
           <span className="span2">Weather</span> Anytime, Anywhere
         </span>
       </div>
+      
       {/* Weather Input Section */}
       <div className="weather-input-section">
         <WeatherInput onFetchWeather={(data) => { 
@@ -95,7 +98,12 @@ function App() {
           </div>
         )
       )}
+      <div className="project-summary-section">
+        <ProjectSummary />
+      </div>
     </div>
+    
+  </>
   );
 }
 

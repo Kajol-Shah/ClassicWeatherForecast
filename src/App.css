@@ -219,4 +219,40 @@ div.current-location-details {
   background: linear-gradient(45deg, rgba(31, 26, 112, 1), rgba(194, 189, 228, 1));
   color: #fff;
 }
+.project-summary-container {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.accordion-header {
+  cursor: pointer;
+  font-size: 18px;
+  padding-bottom: 10px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  color: #6a4fd789;
+}
+
+.accordion-content {
+  padding: 25px;
+  background-color: #efedfa6c;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.accordion-content p, .accordion-content ul {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
